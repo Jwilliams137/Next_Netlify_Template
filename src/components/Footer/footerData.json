@@ -1,0 +1,21 @@
+{
+    "socialLinks": [
+      {
+        "href": "https://github.com",
+        "icon": "faGithub"
+      },
+      {
+        "href": "https://www.facebook.com",
+        "icon": "faFacebook"
+      },
+      {
+        "href": "https://x.com",
+        "icon": "faXTwitter"
+      },
+      {
+        "href": "https://www.instagram.com/",
+        "icon": "faInstagram"
+      }
+    ],
+    "copyright": "© {year} Your name here. All rights reserved."
+  }  

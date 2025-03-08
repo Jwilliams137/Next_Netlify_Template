@@ -1,68 +1,37 @@
-'use client'
-import React, { useState } from 'react';
-import styles from './page.module.css';
+import React from 'react'
+import styles from './page.module.css'
 
-function Page() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState(null);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitError(null);
-
-    const formData = new FormData(e.target);
-    const data = new URLSearchParams(formData);
-
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        body: data,
-      });
-
-      if (!res.ok) {
-        throw new Error('Failed to submit form');
-      }
-
-      window.location.href = '/thank-you'; // Redirect to the Thank You page
-    } catch (error) {
-      setSubmitError('There was an error with your submission. Please try again.');
-      setIsSubmitting(false);
-    }
-  };
-
+function page() {
   return (
     <div className={styles.container}>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-          className={styles.inputField}
+      <form action="https://formsubmit.co/jwilliams137.036@gmail.com" method="POST" className={styles.form}>
+        <input 
+          type="text" 
+          name="name" 
+          placeholder="Your Name" 
+          required 
+          className={styles.inputField} 
         />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          required
-          className={styles.inputField}
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Your Email" 
+          required 
+          className={styles.inputField} 
         />
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          required
+        <textarea 
+          name="message" 
+          placeholder="Your Message" 
+          required 
           className={styles.textarea}
         ></textarea>
-
-        <button type="submit" className={styles.button} disabled={isSubmitting}>
-          {isSubmitting ? 'Submitting...' : 'Send Message'}
-        </button>
+        <input type="hidden" name="_next" value="https://atkinson-art.netlify.app/thank-you" className={styles.hidden} />
+        <input type="hidden" name="_subject" value="New message from your website visitor" className={styles.hidden} />
+        <input type="hidden" name="_honey" className={styles.hidden} />
+        <button type="submit" className={styles.button}>Send Message</button>
       </form>
-
-      {submitError && <p>{submitError}</p>}
     </div>
-  );
+  )
 }
 
-export default Page;
+export default page

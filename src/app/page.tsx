@@ -6,7 +6,7 @@ export default function Home() {
     <div className={styles.container}>
       <h2 className={styles.intro}>Next.js template renovated for easy deployment to Netlify including responsive navigation and footer.</h2>
       <p className={styles.instructions}>&#8226; Includes contact page setup for free use with Formsubmit. Just add your address</p>
-      <p className={styles.instructions}>&#8226; Feel free to modify this project for your personal use!</p>
+      <p className={styles.instructions}>&#8226; Get started modifying this project for your personal use!</p>
       <div className={styles.imageWrapper}>
         <Image
           src="/NextlifySharing.jpg"

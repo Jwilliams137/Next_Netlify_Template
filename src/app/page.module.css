@@ -9,9 +9,22 @@
   font-weight: bold;
 }
 
+.info {
+  padding: 0px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .instructions {
   font-size: 25px;
   line-height: 1.6;
+}
+
+.link {
+  font-size: 25px;
+  line-height: 1.6;
+  font-weight: bold;
 }
 
 .imageWrapper {
@@ -36,6 +49,10 @@
   .instructions {
     font-size: 22px;
   }
+
+  .link {
+    font-size: 22px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -44,6 +61,10 @@
   }
 
   .instructions {
+    font-size: 20px;
+  }
+
+  .link {
     font-size: 20px;
   }
 }

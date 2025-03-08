@@ -24,3 +24,14 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Forking and Contributing
+
+Feel free to fork this project and use it for your own purposes or contribute back improvements! To fork the project, just click the **Fork** button at the top right of this page.
+
+If you'd like to contribute to the project, please follow these steps:
+1. Fork the repository.
+2. Create your own branch for changes.
+3. Submit a pull request with your improvements or bug fixes.
+
+Please make sure to follow the guidelines of the **MIT License** in your contributions.

@@ -1,0 +1,47 @@
+.sidebar {
+    height: 100%;
+    width: 300px;
+    display: block;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+.navList {
+    margin-left: 40px;
+    text-align: left;
+}
+
+.navItem {
+    margin: 20px 0;
+}
+
+.navLink {
+    font-size: 25px;
+    display: block;
+    padding: 5px 0;
+}
+
+.navLink:hover {
+    color: var(--hover-text);
+}
+
+.showDesktop {
+    display: block;
+}
+
+.hideDesktop {
+    display: none;
+}
+
+@media only screen and (max-width: 1300px) {
+    .sidebar {
+        width: 200px;
+    }
+    .navLink {
+        font-size: 22px;
+    }
+
+    .navList {
+        margin-left: 0;
+    }
+}

@@ -1,12 +1,13 @@
 "use client";
+import React from 'react';
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Nav.module.css";
 import navData from "../../data/navData.json";
 
 export default function Nav() {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
-  const { title, pages } = navData;  
+  const { title, pages } = navData;
 
   useEffect(() => {
     const handleResize = () => {
@@ -47,10 +48,6 @@ export default function Nav() {
               {Object.keys(pages).map((key) => {
                 const page = pages[key];
 
-                if (page.restricted && !isUserAllowed && key === 'admin') {
-                  return null;
-                }
-
                 return (
                   <li key={key}>
                     <Link href={page.href || `/${key}`} className={styles.link}>
@@ -74,22 +71,44 @@ export default function Nav() {
       </div>
 
       {isBurgerMenuOpen && (
-        <div className={`${styles.burgerMenu} ${isBurgerMenuOpen ? styles.open : ""}`}>
+        <div
+          className={`${styles.burgerMenu} ${isBurgerMenuOpen ? styles.open : ""
+            }`}
+        >
           <Link href="/" className={styles.mobileTitle} onClick={closeBurgerMenu}>
             {splitTitle(title)}
           </Link>
-          <ul className={styles.linkList}>
+          <ul className={styles.burgerLinkList}>
             {Object.keys(pages).map((key) => {
               const page = pages[key];
-              if (page.restricted && !isUserAllowed && key === 'admin') {
-                return null;
-              }
+
               return (
-                <li key={key} className={styles.burgerItem}>
-                  <Link href={page.href || `/${key}`} className={styles.link} onClick={closeBurgerMenu}>
-                    {page.label}
-                  </Link>
-                </li>
+                <div key={`${key}-wrapper`} className={styles.burgerList}>
+                  <li key={key} className={styles.burgerMainItem}>
+                    <Link
+                      href={page.href || `/${key}`}
+                      className={styles.burgerMainLink}
+                      onClick={closeBurgerMenu}
+                    >
+                      {page.label}
+                    </Link>
+                    {page.subPages && (
+                      <ul className={styles.burgerSubList}>
+                        {page.subPages.map((subPage, subIndex) => (
+                          <li key={subPage.href || subIndex} className={styles.burgerSubItem}>
+                            <Link
+                              href={subPage.href}
+                              className={styles.burgerSubLink}
+                              onClick={closeBurgerMenu}
+                            >
+                              {subPage.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                </div>
               );
             })}
           </ul>

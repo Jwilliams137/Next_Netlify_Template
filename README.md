@@ -1,10 +1,8 @@
-This is a basic Next.js template I created including a responsive navigation and footer.  It's renovated for easy deployment to Netlify. It also has  contact page setup for free use with Formsubmit.  All you need to do to get the contact form working is add your email address to the env.local. Feel free to modify this project for your personal use!
+Next.js template renovated for easy deployment to Netlify including a responsive navigation and footer. Also has contact page setup for free use with Formsubmit.  All you need to do to get the contact form working is add your email address to the env.local. Feel free to modify this project for your personal use!
 
 ## Getting Started
 
-First you will need to do npm install to get the required dependencies
-
-then, run the development server:
+First npm install then, run the development server:
 
 ```bash
 npm run dev

@@ -1,9 +1,20 @@
 {
-    "title": "Basic Template",
+    "title": "Nextlify Starter",
     "pages": {
-      "about": { "label": "About", "href": "/about"},
-      "projects": {"label": "Projects", "href": "/projects" },      
+      "about": { 
+        "label": "About", 
+        "subPages": [
+          { "label": "Bio", "href": "/about/bio" },
+          { "label": "inspiration", "href": "/about/inspiration" }
+        ]
+      },      
+      "projects": {
+        "label": "Projects",
+        "subPages": [
+          { "label": "Project A", "href": "/projects/project-a" },
+          { "label": "Project B", "href": "/projects/project-b" }
+        ]
+      },      
       "contact": { "label": "Contact", "href": "/contact" }
     }
-  }
-  
+  }  

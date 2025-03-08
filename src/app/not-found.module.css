@@ -7,23 +7,24 @@
   }
   
   .title {
-    font-size: 2rem;
+    font-size: 45px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
   }
   
   .text {
-    font-size: 1.2rem;
+    font-size: 25px;
     margin-bottom: 20px;
   }
   
   .button {
+    margin-top: 20px;
     display: inline-block;
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: bold;
     color: white;
-    background-color: var(--primary-text);
+    background-color: #180114;
     border-radius: 5px;
   }
   
@@ -33,15 +34,15 @@
   
   @media (max-width: 768px) {
     .title {
-      font-size: 1.8rem;
+      font-size: 30px;
     }
     
     .text {
-      font-size: 1rem;
+      font-size: 20px;
     }
   
     .button {
-      font-size: 0.9rem;
+      font-size: 18px;
       padding: 8px 16px;
     }
   }

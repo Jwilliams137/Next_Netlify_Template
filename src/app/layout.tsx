@@ -4,7 +4,6 @@ import "./globals.css";
 import styles from "./layout.module.css";
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
-import UnderConstruction from "../components/UnderConstruction/UnderConstruction";
 
 export const metadata: Metadata = {
   title: "Nextlify Starter Template",
@@ -48,7 +47,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </Head>
       <body className={styles.wrapper}>
         <Nav />
-        <UnderConstruction />
         <div className={styles.children_container}>{children}</div>
         <footer className={styles.footer}>
           <Footer />

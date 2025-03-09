@@ -1,3 +1,13 @@
+.infoContainer {
+    padding: 20px 0;
+}
+
+.info {
+font-size: 25px;
+text-align: center;
+margin-bottom: 10px;
+} 
+
 .form {
     width: 80%;
     margin: auto;

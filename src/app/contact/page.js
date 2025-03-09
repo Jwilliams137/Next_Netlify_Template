@@ -4,6 +4,10 @@ import styles from './page.module.css'
 function page() {
   return (
     <div className={styles.container}>
+      <div className={styles.infoContainer}>
+      <p className={styles.info}>This contact form is not currently accepting submissions</p>
+      <p className={styles.info}>To accept messages add your address to the form on app/contact/page.js</p>
+      </div>
       <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" className={styles.form}>
         <input 
           type="text" 

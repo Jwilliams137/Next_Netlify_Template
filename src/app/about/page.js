@@ -1,11 +1,40 @@
 import React from 'react'
+import Image from 'next/image'
+import styles from './page.module.css'
 
-function page() {
+function AboutPage() {
   return (
-    <div>
-        
+    <div className={styles.container}>
+      <div className={styles.instructions}>
+        <p>Nextlify Starter is a Next.js template modified to deploy to Netlify</p>
+        <p>Layout includes responsive nav/footer</p>
+        <p>Edit navData.json to add/remove pages</p>
+        <p>Contact page setup for use with Formsubmit</p>
+      </div>
+      <div className={styles.imagesContainer}>
+        <div className={styles.imageWrapper}>
+          <Image
+            src="/Netlify.png"
+            alt="Next.js Logo"
+            className={styles.image}
+            width={1280}
+            height={720}
+            priority
+          />
+        </div>
+        <div className={styles.imageWrapper}>
+          <Image
+            src="/Nextjs.jpg"
+            alt="Next.js Logo"
+            className={styles.image}
+            width={650}
+            height={366}
+            priority
+          />
+        </div>
+      </div>
     </div>
   )
 }
 
-export default page
+export default AboutPage

@@ -21,12 +21,6 @@
   line-height: 1.6;
 }
 
-.link {
-  font-size: 25px;
-  line-height: 1.6;
-  font-weight: bold;
-}
-
 .imageWrapper {
   display: flex;
   justify-content: center;

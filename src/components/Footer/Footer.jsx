@@ -4,6 +4,7 @@ import { faFacebook, faGithub, faInstagram, faXTwitter } from '@fortawesome/free
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import styles from './Footer.module.css';
 import footerData from './footerData.json';
+import Link from 'next/link';
 
 const iconMapping = {
   faGithub: faGithub,
@@ -15,6 +16,9 @@ const iconMapping = {
 function Footer() {
   return (
     <footer className={styles.footer}>
+      <div className={styles.githubLink}>
+          <Link href="https://github.com/Jwilliams137/Next_Netlify_Template" target="_blank">Click here to fork from GitHub</Link>
+        </div>
       <div className={styles.links}>
         {footerData.socialLinks.map(({ href, icon }) => (
           <a

@@ -5,6 +5,13 @@
     text-align: center;
 }
 
+.githubLink {
+    font-size: 25px;
+    line-height: 1.6;
+    font-weight: bold;
+    padding: 0 0 20px 0;
+  }
+
 .links {
     display: flex;
     justify-content: center;

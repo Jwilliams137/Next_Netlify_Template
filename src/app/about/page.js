@@ -9,7 +9,7 @@ function AboutPage() {
         <p>Nextlify Starter is a Next.js template modified to deploy to Netlify</p>
         <p>Layout includes responsive nav/footer</p>
         <p>Edit navData.json to add/remove pages</p>
-        <p>Contact page setup for use with Formsubmit</p>
+        <p>Contact page setup for use with Formsubmit (free). Just add your email addres</p>
       </div>
       <div className={styles.imagesContainer}>
         <div className={styles.imageWrapper}>

@@ -15,7 +15,7 @@ function AboutPage() {
         <div className={styles.imageWrapper}>
           <Image
             src="/Netlify.png"
-            alt="Next.js Logo"
+            alt="Netlify Logo"
             className={styles.image}
             width={1280}
             height={720}
@@ -29,6 +29,18 @@ function AboutPage() {
             className={styles.image}
             width={650}
             height={366}
+            priority
+          />
+        </div>
+      </div>
+      <div className={styles.formsubmitContainer}>
+      <div className={styles.formsubmitWrapper}>
+          <Image
+            src="/Formsubmit.png"
+            alt="Formsubmit Logo"
+            className={styles.formsubmit}
+            width={1160}
+            height={235}
             priority
           />
         </div>
